@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bankModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bannnk">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="mname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="lname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="marriagestat" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="dobd" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="nationality" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="rescon" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="nice1" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="occupation" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="nic1" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="balance" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="bankEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bannnks" EntityType="Self.bannnk" />
+    <EntitySet Name="logins" EntityType="Self.login" />
+  </EntityContainer>
+</Schema>
